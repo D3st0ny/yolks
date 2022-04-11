@@ -35,10 +35,8 @@ cd /home/container || exit 1
 # Print Python version
 python --version
 
-# Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
-# variable format of "${VARIABLE}" before evaluating the string and automatically
-# replacing the values.
-PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
+MODIFIED_STARTUP=$(echo -e $(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
+echo -e ":/home/container$ ${MODIFIED_STARTUP}"
 
 # Run the Server
-eval ${PARSED}
+eval ${MODIFIED_STARTUP}
