@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 # Copyright (c) 2021 Matthew Penner
 #
@@ -34,7 +33,6 @@ export INTERNAL_IP
 cd /home/container || exit 1
 
 # Print Python version
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0mpython --version\n"
 python --version
 
 # Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
@@ -42,8 +40,5 @@ python --version
 # replacing the values.
 PARSED=$(echo "${STARTUP}" | sed -e 's/{{/${/g' -e 's/}}/}/g' | eval echo "$(cat -)")
 
-# Display the command we're running in the output, and then execute it with the env
-# from the container itself.
-printf "\033[1m\033[33mcontainer@pterodactyl~ \033[0m%s\n" "$PARSED"
-# shellcheck disable=SC2086
-exec env ${PARSED}
+# Run the Server
+eval ${PARSED}
