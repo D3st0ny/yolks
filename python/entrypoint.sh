@@ -14,10 +14,8 @@ cd /home/container || exit 1
 # Print Python version
 python --version
 
-# Convert all of the "{{VARIABLE}}" parts of the command into the expected shell
-# variable format of "${VARIABLE}" before evaluating the string and automatically
-# replacing the values.
+# Replace Startup Variables
 MODIFIED_STARTUP=$(echo -e $(echo -e ${STARTUP} | sed -e 's/{{/${/g' -e 's/}}/}/g'))
 
 # Run the Server
-exec env ${MODIFIED_STARTUP}
+eval ${MODIFIED_STARTUP}
