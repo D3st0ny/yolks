@@ -22,12 +22,22 @@
 
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.10-alpine
 
-RUN apk --no-cache add libintl && \
-	apk --no-cache --virtual .locale_build add cmake make musl-dev gcc gettext-dev git && \
-	git clone https://gitlab.com/rilian-la-te/musl-locales && \
-	cd musl-locales && cmake -DLOCALE_PROFILE=OFF -DCMAKE_INSTALL_PREFIX:PATH=/usr . && make && make install && \
-	cd .. && rm -r musl-locales && \
-	apk del .locale_build
+RUN apk --no-cache add ca-certificates wget && \
+    wget -q -O /etc/apk/keys/sgerrand.rsa.pub https://alpine-pkgs.sgerrand.com/sgerrand.rsa.pub && \
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-2.25-r0.apk && \
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-bin-2.25-r0.apk && \
+    wget https://github.com/sgerrand/alpine-pkg-glibc/releases/download/2.25-r0/glibc-i18n-2.25-r0.apk && \
+    apk add glibc-bin-2.25-r0.apk glibc-i18n-2.25-r0.apk glibc-2.25-r0.apk
+
+# Iterate through all locale and install it
+# Note that locale -a is not available in alpine linux, use `/usr/glibc-compat/bin/locale -a` instead
+COPY ./locale.md /locale.md
+RUN cat /locale.md | xargs -i /usr/glibc-compat/bin/localedef -i {} -f UTF-8 {}.UTF-8
+
+# Set the lang, you can also specify it as as environment variable through docker-compose.yml
+ENV LANG=ru_RU.UTF-8 \
+    LANGUAGE=ru_RU.UTF-8 \
+	LC_ALL=ru_RU.UTF-8
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
