@@ -22,13 +22,10 @@
 
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.10-alpine
 
-RUN apt-get update
-RUN apt-get upgrade -y
-RUN apt-get install -y language-pack-ru
-ENV LANGUAGE ru_RU.UTF-8
-ENV LANG ru_RU.UTF-8
+RUN locale-gen ru_RU.UTF-8  
+ENV LANG ru_RU.UTF-8  
+ENV LANGUAGE ru_RU:en  
 ENV LC_ALL ru_RU.UTF-8
-RUN locale-gen ru_RU.UTF-8 && dpkg-reconfigure locales
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
