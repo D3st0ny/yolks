@@ -22,9 +22,9 @@
 
 FROM        --platform=$TARGETOS/$TARGETARCH python:3.10-alpine
 
-ENV LC_ALL ru_RU.UTF-8
-ENV LANG ru_RU.UTF-8
-ENV LANGUAGE ru_RU.UTF-8
+ENV LC_ALL ru_RU.utf8
+ENV LANG ru_RU.utf8
+ENV LANGUAGE ru_RU.utf8
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
