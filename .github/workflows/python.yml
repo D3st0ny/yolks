@@ -40,4 +40,4 @@ jobs:
           platforms: linux/amd64, linux/arm64
           push: true
           tags: |
-            ghcr.io/Anvilteam/yolks:python_${{ matrix.tag }}
+            ghcr.io/D3st0ny/yolks:python_${{ matrix.tag }}
