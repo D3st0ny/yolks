@@ -8,9 +8,6 @@ these images on an arm64 system, no modification to them or the tag is needed, t
 
 ## Available Images
 
-* [`base oses`](https://github.com/pterodactyl/yolks/tree/master/oses)
-  * [`alpine`](https://github.com/pterodactyl/yolks/tree/master/oses/alpine)
-    * `ghcr.io/pterodactyl/yolks:alpine`
 * [`java`](https://github.com/d3st0ny/yolks/tree/master/java)
   * [`java8`](https://github.com/d3st0ny/yolks/tree/master/java/8)
     * `ghcr.io/d3st0ny/yolks:java_8`
@@ -28,6 +25,8 @@ these images on an arm64 system, no modification to them or the tag is needed, t
     * `ghcr.io/d3st0ny/yolks:java_17`
   * [`java17 - OpenJ9`](https://github.com/d3st0ny/yolks/tree/master/java/17j9)
     * `ghcr.io/d3st0ny/yolks:java_17j9`
+  * [`java18`](https://github.com/d3st0ny/yolks/tree/master/java/18)
+    * `ghcr.io/d3st0ny/yolks:java_18`
 * [`nodejs`](https://github.com/d3st0ny/yolks/tree/master/nodejs)
   * [`node16`](https://github.com/d3st0ny/yolks/tree/master/nodejs/16)
     * `ghcr.io/d3st0ny/yolks:nodejs_16`
@@ -40,3 +39,8 @@ these images on an arm64 system, no modification to them or the tag is needed, t
     * `ghcr.io/d3st0ny/yolks:python_3.9`
   * [`python3.10`](https://github.com/d3st0ny/yolks/tree/master/python/3.10)
     * `ghcr.io/d3st0ny/yolks:python_3.10`
+
+### Installation Images
+
+* [`alpine-install`](https://github.com/d3st0ny/yolks/tree/master/installers/alpine)
+  * `ghcr.io/d3st0ny/installers:alpine`
