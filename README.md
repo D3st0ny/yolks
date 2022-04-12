@@ -26,12 +26,6 @@ these images on an arm64 system, no modification to them or the tag is needed, t
   * [`java17 - OpenJ9`](https://github.com/d3st0ny/yolks/tree/master/java/17j9)
     * `ghcr.io/d3st0ny/yolks:java_17j9`
 * [`nodejs`](https://github.com/d3st0ny/yolks/tree/master/nodejs)
-  * [`node12`](https://github.com/d3st0ny/yolks/tree/master/nodejs/12)
-    * `ghcr.io/d3st0ny/yolks:nodejs_12`
-  * [`node14`](https://github.com/d3st0ny/yolks/tree/master/nodejs/14)
-    * `ghcr.io/d3st0ny/yolks:nodejs_14`
-  * [`node15`](https://github.com/d3st0ny/yolks/tree/master/nodejs/15)
-    * `ghcr.io/d3st0ny/yolks:nodejs_15`
   * [`node16`](https://github.com/d3st0ny/yolks/tree/master/nodejs/16)
     * `ghcr.io/d3st0ny/yolks:nodejs_16`
   * [`node17`](https://github.com/d3st0ny/yolks/tree/master/nodejs/17)
