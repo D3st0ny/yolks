@@ -30,6 +30,8 @@ LABEL       org.opencontainers.image.licenses=MIT
 RUN         apk add --update --no-cache ca-certificates curl ffmpeg git openssl sqlite tar tzdata \
 				&& adduser -D -h /home/container container
 
+RUN npm i -g pnpm
+
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
