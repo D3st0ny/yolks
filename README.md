@@ -8,6 +8,9 @@ these images on an arm64 system, no modification to them or the tag is needed, t
 
 ## Available Images
 
+* [`base oses`](https://github.com/pterodactyl/yolks/tree/master/oses)
+  * [`alpine`](https://github.com/pterodactyl/yolks/tree/master/oses/alpine)
+    * `ghcr.io/pterodactyl/yolks:alpine`
 * [`java`](https://github.com/d3st0ny/yolks/tree/master/java)
   * [`java8`](https://github.com/d3st0ny/yolks/tree/master/java/8)
     * `ghcr.io/d3st0ny/yolks:java_8`
