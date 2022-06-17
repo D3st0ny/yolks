@@ -5,8 +5,11 @@ LABEL       author="D3st0ny" maintainer="me@destony.dev"
 LABEL       org.opencontainers.image.source="https://github.com/D3st0ny/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apk add --update --no-cache ca-certificates tzdata \
+RUN         apk add --update --no-cache ca-certificates tzdata sudo \
 			&& adduser -D -h /home/container container
+
+RUN 		echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel \
+			&& adduser container wheel
 
 USER        container
 ENV         USER=container HOME=/home/container
