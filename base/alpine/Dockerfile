@@ -9,7 +9,7 @@ RUN         apk add --update --no-cache ca-certificates tzdata \
 			&& adduser -D -h /home/container container
 
 USER        root
-ENV         USER=container HOME=/home/container
+ENV         USER=root HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./entrypoint.sh /entrypoint.sh
