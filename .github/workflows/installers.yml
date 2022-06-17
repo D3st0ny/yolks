@@ -17,6 +17,7 @@ jobs:
       matrix:
         tag:
           - alpine
+          - debian
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1
