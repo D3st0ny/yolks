@@ -32,6 +32,8 @@ these images on an arm64 system, no modification to them or the tag is needed, t
     * `ghcr.io/d3st0ny/yolks:nodejs_16`
   * [`node17`](https://github.com/d3st0ny/yolks/tree/master/nodejs/17)
     * `ghcr.io/d3st0ny/yolks:nodejs_17`
+  * [`node18`](https://github.com/d3st0ny/yolks/tree/master/nodejs/18)
+    * `ghcr.io/d3st0ny/yolks:nodejs_18`
 * [`python`](https://github.com/d3st0ny/yolks/tree/master/python)
   * [`python3.8`](https://github.com/d3st0ny/yolks/tree/master/python/3.8)
     * `ghcr.io/d3st0ny/yolks:python_3.8`
