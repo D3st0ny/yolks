@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH node:16-alpine
+FROM        --platform=$TARGETOS/$TARGETARCH node:18-alpine
 
 LABEL       author="D3st0ny" maintainer="me@destony.dev"
 
