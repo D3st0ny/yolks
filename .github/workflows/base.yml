@@ -1,4 +1,4 @@
-name: build oses
+name: build base
 on:
   workflow_dispatch:
   schedule:
@@ -7,15 +7,15 @@ on:
     branches:
       - master
     paths:
-      - oses/**
+      - os/**
 jobs:
   push:
-    name: "yolks:${{ matrix.oses }}"
+    name: "yolks:${{ matrix.base }}"
     runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        oses:
+        base:
           - alpine
           - debian
           - ubuntu
