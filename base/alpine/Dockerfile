@@ -6,10 +6,9 @@ LABEL       org.opencontainers.image.source="https://github.com/D3st0ny/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apk add --update --no-cache ca-certificates tzdata sudo \
-			&& adduser -D -h /home/container container
-
-RUN 		echo '%wheel ALL=(ALL) ALL' > /etc/sudoers.d/wheel \
-			&& adduser container wheel
+			&& adduser -D -h /home/container container \
+			&& echo "$USER ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/container \
+        	&& chmod 0440 /etc/sudoers.d/container
 
 USER        container
 ENV         USER=container HOME=/home/container
