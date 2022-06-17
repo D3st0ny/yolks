@@ -1,4 +1,4 @@
-FROM         --platform=$TARGETOS/$TARGETARCH ubuntu:20.04
+FROM         --platform=$TARGETOS/$TARGETARCH ubuntu:18.04
 
 LABEL       author="D3st0ny" maintainer="me@destony.dev"
 
