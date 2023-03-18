@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.5
+FROM        --platform=$TARGETOS/$TARGETARCH mariadb:10.11.2
 
 LABEL       author="D3st0ny" maintainer="me@destony.dev"
 

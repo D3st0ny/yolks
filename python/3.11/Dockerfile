@@ -1,4 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.9-slim
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.11-slim
 
 ENV LANG=ru_RU.UTF-8 \
     LANGUAGE=ru_RU.UTF-8 \

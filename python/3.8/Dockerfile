@@ -1,9 +1,4 @@
-FROM        --platform=$TARGETOS/$TARGETARCH python:3.8-alpine
-
-ENV MUSL_LOCPATH=/usr/local/share/i18n/locales/musl
-RUN apk add --update git cmake make musl-dev gcc gettext-dev libintl
-RUN cd /tmp && git clone https://gitlab.com/rilian-la-te/musl-locales.git
-RUN cd /tmp/musl-locales && cmake . && make && make install
+FROM        --platform=$TARGETOS/$TARGETARCH python:3.8-slim
 
 ENV LANG=ru_RU.UTF-8 \
     LANGUAGE=ru_RU.UTF-8 \
@@ -14,12 +9,13 @@ LABEL       author="D3st0ny" maintainer="me@destony.dev"
 LABEL       org.opencontainers.image.source="https://github.com/D3st0ny/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
-RUN         apk add --update --no-cache cmake make ca-certificates curl ffmpeg g++ gcc git openssl sqlite tar tzdata \
-				&& adduser -D -h /home/container container
+RUN         apt update \
+            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && useradd -m -d /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./../entrypoint.sh /entrypoint.sh
-CMD         [ "/bin/ash", "/entrypoint.sh" ]
+CMD         [ "/bin/bash", "/entrypoint.sh" ]
