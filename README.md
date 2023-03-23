@@ -27,6 +27,10 @@ these images on an arm64 system, no modification to them or the tag is needed, t
     * `ghcr.io/d3st0ny/yolks:java_17j9`
   * [`java18`](https://github.com/d3st0ny/yolks/tree/master/java/18)
     * `ghcr.io/d3st0ny/yolks:java_18`
+  * [`java19`](https://github.com/d3st0ny/yolks/tree/master/java/19)
+    * `ghcr.io/d3st0ny/yolks:java_19`
+  * [`java20`](https://github.com/d3st0ny/yolks/tree/master/java/20)
+    * `ghcr.io/d3st0ny/yolks:java_20`
 * [`nodejs`](https://github.com/d3st0ny/yolks/tree/master/nodejs)
   * [`node16`](https://github.com/d3st0ny/yolks/tree/master/nodejs/16)
     * `ghcr.io/d3st0ny/yolks:nodejs_16`
@@ -41,6 +45,8 @@ these images on an arm64 system, no modification to them or the tag is needed, t
     * `ghcr.io/d3st0ny/yolks:python_3.9`
   * [`python3.10`](https://github.com/d3st0ny/yolks/tree/master/python/3.10)
     * `ghcr.io/d3st0ny/yolks:python_3.10`
+  * [`python3.10`](https://github.com/d3st0ny/yolks/tree/master/python/3.11)
+    * `ghcr.io/d3st0ny/yolks:python_3.11`
 
 ### Installation Images
 
