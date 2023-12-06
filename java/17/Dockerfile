@@ -1,8 +1,8 @@
 FROM        --platform=$TARGETOS/$TARGETARCH openjdk:17-slim
 
-LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
+LABEL       author="D3st0ny" maintainer="me@destony.dev"
 
-LABEL       org.opencontainers.image.source="https://github.com/pterodactyl/yolks"
+LABEL       org.opencontainers.image.source="https://github.com/D3st0ny/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN 		apt-get update -y \
