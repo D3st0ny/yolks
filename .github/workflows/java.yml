@@ -20,12 +20,10 @@ jobs:
           - '11'
           - '16'
           - '17'
-          - '17_GraalVM'
           - '18'
           - '19'
           - '20'
           - '21'
-          - '21_GraalVM'
     steps:
       - uses: actions/checkout@v2
       - uses: docker/setup-qemu-action@v1

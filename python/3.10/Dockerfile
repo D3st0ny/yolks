@@ -10,7 +10,7 @@ LABEL       org.opencontainers.image.source="https://github.com/D3st0ny/yolks"
 LABEL       org.opencontainers.image.licenses=MIT
 
 RUN         apt update \
-            && apt -y install git gcc g++ ca-certificates dnsutils curl iproute2 ffmpeg procps \
+            && apt -y install git gcc g++ ca-certificates dnsutils curl wget iproute2 ffmpeg procps \
             && useradd -m -d /home/container container
 
 USER        container
